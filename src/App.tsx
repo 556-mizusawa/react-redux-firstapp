@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface AppProps {
+interface UserProps {
   name?: string;
   age?: number;
 }
 
-const App: React.FunctionComponent<AppProps> = () => {
+const App: React.FunctionComponent<UserProps> = () => {
   const profiles: {
     name: string;
     age?: number;
@@ -24,7 +24,7 @@ const App: React.FunctionComponent<AppProps> = () => {
   );
 };
 
-const User = (props: AppProps) => {
+const User = (props: UserProps) => {
   return (
     <div>
       <p>Hi, I am {props.name},</p>
@@ -34,7 +34,7 @@ const User = (props: AppProps) => {
 };
 
 User.defaultProps = {
-  age: 1,
+  age: 'Secrets',
 };
 
 export default App;
