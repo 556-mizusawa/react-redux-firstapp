@@ -1,14 +1,13 @@
 import React from 'react';
+import Counter from './counter';
 
-function App() {
-  const inputbutton = (): void => console.log('hello');
-
-  return (
-    <div>
-      <h1>Hello World</h1>
-      <input type="text" onClick={inputbutton} />
-    </div>
-  );
+interface UserProps {
+  name?: string;
+  age?: number;
 }
+
+const App: React.FC<UserProps> = () => {
+  return <Counter />;
+};
 
 export default App;
