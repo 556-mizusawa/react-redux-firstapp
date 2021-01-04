@@ -4,11 +4,11 @@ const Counter: React.FC<{}> = () => {
   const [value, setValue] = useState<number>(0);
 
   const incriment = () => {
-    setValue((prevSrate) => prevSrate + 1);
+    setValue((prevSrate: number) => prevSrate + 1);
   };
 
   const decrement = () => {
-    setValue((prevSrate) => prevSrate - 1);
+    setValue((prevSrate: number) => prevSrate - 1);
   };
 
   const renderTimes = useRef<number>(0);
